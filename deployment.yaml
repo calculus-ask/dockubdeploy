@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: plumber-on-k8-deployment
+  name: dockubdeploy-deployment
 spec:
   replicas: 3
 selector:
   matchLabels:
-  app: plumber-on-k8
+  app: dockubdeploy
 template:
   metadata:
   labels:
-  app: plumber-on-k8
+  app: dockubdeploy
 spec:
   containers:
   - name: plumber-on-k8

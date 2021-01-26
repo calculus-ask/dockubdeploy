@@ -1,29 +1,29 @@
 apiVersion: networking.k8.io/v1beta1
 kind: Ingress
 metadata:
-  name: plumber-on-k8-ingress
+  name: dockubdeploy-ingress
 spec:
   rules:
   - http:
   paths:
   - path: /health
 backend:
-  serviceName: plumber-on-k8s-service
+  serviceName: dockubdeploy-service
 servicePort: 8000
 - path: /parity
 backend:
-  serviceName: plumber-on-k8-service
+  serviceName: dockubdeploy-service
 servicePort: 8000
 - path: /wait
 backend:
-  serviceName: plumber-on-k8-service
+  serviceName: dockubdeploy-service
 servicePort: 8000
 - path: /fail
 backend:
-  serviceName: plumber-on-k8-service
+  serviceName: dockubdeploy-service
 servicePort: 8000
 - path: /quit
 backend:
-  serviceName: plumber-on-k8-service
+  serviceName: dockubdeploy-service
 servicePort: 8000
 © 2021 GitHub, Inc.
