@@ -9,23 +9,23 @@ spec:
       app: dockubdeploy
   template:
     metadata:
-    labels:
-      app: dockubdeploy
-  spec:
-    containers:
-    - name: dockubdeploy
-    image: calculus2ask/dockubdeploy
-    ports:
-    - containerPort: 8000
-    livenessProbe:
-      httpGet:
-        path: /health
-        port: 8000
-      initialDelaySeconds: 3
-      periodSeconds: 3
-    readinessProbe:
-      httpGet:
-        path: /health
-        port: 8000
-      initialDelaySeconds: 3
-      periodSeconds: 3
+      labels:
+        app: dockubdeploy
+    spec:
+      containers:
+      - name: dockubdeploy
+        image: calculus2ask/dockubdeploy
+        ports:
+        - containerPort: 8000
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 3
+          periodSeconds: 3
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 3
+          periodSeconds: 3
