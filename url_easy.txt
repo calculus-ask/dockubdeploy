@@ -30,4 +30,4 @@ git push -u origin main
 ----------
 Kubernetes
 ----------
-kubectl apply -f https://raw.githubusercontent.com/calculus-ask/dockubdeploy/main/deployment.yaml
+kubectl apply -f https://raw.githubusercontent.com/calculus-ask/dockubdeploy/main/deployment.yaml --getting error
