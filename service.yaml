@@ -4,8 +4,8 @@ metadata:
   name: dockubdeploy-service
 spec:
   selector:
-  app: dockubdeploy
-ports:
-  - protocol: TCP
-port: 8000
-targetPort: 8000
+    app: dockubdeploy
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000

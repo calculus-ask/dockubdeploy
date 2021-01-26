@@ -5,25 +5,24 @@ metadata:
 spec:
   rules:
   - http:
-  paths:
-  - path: /health
-backend:
-  serviceName: dockubdeploy-service
-servicePort: 8000
-- path: /parity
-backend:
-  serviceName: dockubdeploy-service
-servicePort: 8000
-- path: /wait
-backend:
-  serviceName: dockubdeploy-service
-servicePort: 8000
-- path: /fail
-backend:
-  serviceName: dockubdeploy-service
-servicePort: 8000
-- path: /quit
-backend:
-  serviceName: dockubdeploy-service
-servicePort: 8000
-© 2021 GitHub, Inc.
+      paths:
+      - path: /health
+        backend:
+          serviceName: dockubdeploy-service
+          servicePort: 8000
+      - path: /parity
+        backend:
+          serviceName: dockubdeploy-service
+          servicePort: 8000
+      - path: /wait
+        backend:
+          serviceName: dockubdeploy-service
+          servicePort: 8000
+      - path: /fail
+        backend:
+          serviceName: dockubdeploy-service
+          servicePort: 8000
+      - path: /quit
+        backend:
+          serviceName: dockubdeploy-service
+          servicePort: 8000

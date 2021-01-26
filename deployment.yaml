@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dockubdeploy
-        image: calculus2ask/dockubdeploy
+        image: calculus2ask/dockubdeploy:v1
         ports:
         - containerPort: 8000
         livenessProbe:
