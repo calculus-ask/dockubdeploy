@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: plumber-on-k8-deployment
+spec:
+  replicas: 3
+selector:
+  matchLabels:
+  app: plumber-on-k8
+template:
+  metadata:
+  labels:
+  app: plumber-on-k8
+spec:
+  containers:
+  - name: plumber-on-k8
+image: calculus2ask/dockubdeploy:v1
+ports:
+  - containerPort: 8000
+livenessProbe:
+  httpGet:
+  path: /health
+port: 8000
+initialDelaySeconds: 3
+periodSeconds: 3
+readinessProbe:
+  httpGet:
+  path: /health
+port: 8000
+initialDelaySeconds: 3
+periodSeconds: 3

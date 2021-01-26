@@ -1,0 +1,30 @@
+docker build -t santhana/plumber-on-k8 .
+docker run -p 8000:8000 santhana/plumber-on-k8
+
+http://127.0.0.1:8000/parity?int=20
+
+------
+docker build, tag and push in dockerhub
+------
+https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/
+
+docker build -t calculus2ask/firstdockub .
+docker images
+docker run -p 8000:8000 calculus2ask/firstdockub
+
+docker login
+docker tag calculus2ask/firstdockub calculus2ask/firstdockub:v1
+docker push calculus2ask/firstdockub:v1
+
+
+-----
+Easier codes with tag -t
+-----
+docker login
+docker build -t calculus2ask/dockubdeploy:v1 .
+docker push calculus2ask/dockubdeploy:v1
+docker run -p 8000:8000 calculus2ask/dockubdeploy:v1
+
+
+kubectl apply -f https://raw.githubusercontent.com/mdneuzerling/plumber-on-k8s/main/deployment.yamlkubec
+
